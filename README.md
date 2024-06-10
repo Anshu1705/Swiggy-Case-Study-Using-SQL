@@ -13,9 +13,11 @@ Swiggy is a leading food ordering and delivery platform in India. Founded in 201
 
 Users:
 
+
 Stores information about Swiggy users.
 
 Includes details such as name, email, phone number, city, and join date.
+
 
 
 Restaurants:
@@ -25,10 +27,13 @@ Contains data about restaurants available on Swiggy.
 Includes attributes like restaurant name and city.
 
 
+
 Orders:
+
 Tracks orders placed by users.
 
 Includes details such as order date, order placed time, delivery time, total amount, order status, and order source.
+
 
 
 Order_Items:
@@ -38,11 +43,13 @@ Stores individual items included in each order.
 Contains information like item name, quantity, and unit price.
 
 
+
 Delivery_Partners:
 
 Represents delivery partners associated with Swiggy.
 
 Includes details such as partner name and city.
+
 
 
 Restaurant_Ratings:
@@ -53,7 +60,9 @@ Includes attributes like restaurant rating and rating date.
 
 
 
+
 # Case Study Analysis Questions
+
  Q1. How many orders were placed on Swiggy last month?
  
 
