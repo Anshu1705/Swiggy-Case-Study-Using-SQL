@@ -11,7 +11,7 @@ Swiggy is a leading food ordering and delivery platform in India. Founded in 201
 
 # Swiggy Schema Tables: Description
 
-Users:
+(1) Users:
 
 
 Stores information about Swiggy users.
@@ -20,7 +20,7 @@ Includes details such as name, email, phone number, city, and join date.
 
 
 
-Restaurants:
+(2) Restaurants:
 
 Contains data about restaurants available on Swiggy.
 
@@ -28,7 +28,7 @@ Includes attributes like restaurant name and city.
 
 
 
-Orders:
+(3) Orders:
 
 Tracks orders placed by users.
 
@@ -36,7 +36,7 @@ Includes details such as order date, order placed time, delivery time, total amo
 
 
 
-Order_Items:
+(4) Order_Items:
 
 Stores individual items included in each order.
 
@@ -44,7 +44,7 @@ Contains information like item name, quantity, and unit price.
 
 
 
-Delivery_Partners:
+(5) Delivery_Partners:
 
 Represents delivery partners associated with Swiggy.
 
@@ -52,7 +52,7 @@ Includes details such as partner name and city.
 
 
 
-Restaurant_Ratings:
+(6) Restaurant_Ratings:
 
 Stores ratings given by users to restaurants.
 
