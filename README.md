@@ -1,5 +1,10 @@
 # Swiggy-Case-Study-Using-SQL
 
+
+
+
+
+
 # Swiggy Case Study overview
 
 Swiggy is a leading food ordering and delivery platform in India. Founded in 2014, Swiggy has revolutionized the food delivery industry by leveraging technology to connect users with restaurants and delivery partners. With its user-friendly app and extensive restaurant network, Swiggy has become a household name, offering convenience and variety to millions of customers across the country.
