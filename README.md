@@ -5,140 +5,135 @@
 
 
 
-# Swiggy Case Study overview
 
-Swiggy is a leading food ordering and delivery platform in India. Founded in 2014, Swiggy has revolutionized the food delivery industry by leveraging technology to connect users with restaurants and delivery partners. With its user-friendly app and extensive restaurant network, Swiggy has become a household name, offering convenience and variety to millions of customers across the country.
 
 # Swiggy Schema Tables: Description
 
-(1) Users:
 
-
-Stores information about Swiggy users.
-
-Includes details such as name, email, phone number, city, and join date.
+(1) restaurant_no: This column serves as a unique identifier for each restaurant in the dataset. It helps distinguish between different restaurants and is typically used for referencing and indexing purposes.
 
 
 
-(2) Restaurants:
-
-Contains data about restaurants available on Swiggy.
-
-Includes attributes like restaurant name and city.
+(2) restaurant_name: The name of the restaurant. This column identifies the establishment and is often used for display purposes or when referring to specific restaurants in analyses or discussions.
 
 
 
-(3) Orders:
-
-Tracks orders placed by users.
-
-Includes details such as order date, order placed time, delivery time, total amount, order status, and order source.
+(3) city: Specifies the city where the restaurant is located. It provides geographical information about the restaurant's location, which can be useful for regional analyses or for users searching for restaurants in specific areas.
 
 
 
-(4) Order_Items:
-
-Stores individual items included in each order.
-
-Contains information like item name, quantity, and unit price.
+(4) address: The physical address of the restaurant, providing the location details such as street name, building number, and locality. It helps users navigate to the restaurant's location or contact them for inquiries or reservations.
 
 
 
-(5) Delivery_Partners:
-
-Represents delivery partners associated with Swiggy.
-
-Includes details such as partner name and city.
+(5) rating: Represents the average rating of the restaurant. Ratings are typically based on user reviews and provide insights into the overall customer satisfaction and dining experience at the restaurant.
 
 
 
-(6) Restaurant_Ratings:
+(6) cost_per_person: Indicates the average cost per person for dining at the restaurant. This metric gives an idea of the restaurant's price range and affordability, helping customers plan their dining budgets accordingly.
 
-Stores ratings given by users to restaurants.
+ (7) cuisine: Describes the type of cuisine offered by the restaurant, such as Italian, Indian, Chinese, etc. It provides information about the restaurant's culinary specialties and helps customers choose restaurants based on their food preferences.
 
-Includes attributes like restaurant rating and rating date.
+(8) restaurant_link: Contains the website link or URL of the restaurant. This column enables users to access additional information about the restaurant, such as their menu, online ordering options, contact details, etc., by clicking on the provided link.
+
+(9) menu_category: Specifies the category to which the menu item belongs, such as Appetizers, Main Course, Desserts, etc. It organizes the menu items into different sections, making it easier for customers to navigate through the menu.
+
+(10) item: The name of the menu item offered by the restaurant. This column lists the various dishes, beverages, or items available for ordering at the restaurant.
+
+(11) price: Indicates the price of the menu item. It provides information about the cost of individual dishes or items on the menu, helping customers make informed decisions based on their budget.
+
+(12) veg_or_non-veg: Specifies whether the menu item is vegetarian or non-vegetarian. This column helps customers with dietary restrictions or preferences identify suitable food options when browsing through the menu.
+
+# Questions
+
+
+
+Q1. HOW MANY RESTAURANTS HAVE A RATING GREATER THAN 4.5?
+
+Q2. WHICH IS THE TOP 1 CITY WITH THE HIGHEST NUMBER OF RESTAURANTS?
+
+Q3. HOW MANY RESTAURANTS HAVE THE WORD "PIZZA" IN THEIR NAME?
+
+Q4. WHAT IS THE MOST COMMON CUISINE AMONG THE RESTAURANTS IN THE DATASET?
+
+Q5. WHAT IS THE AVERAGE RATING OF RESTAURANTS IN EACH CITY?
+
+Q6. WHAT IS THE HIGHEST PRICE OF ITEM UNDER THE 'RECOMMENDED' MENU CATEGORY FOR EACH RESTAURANT?
+
+Q7. MOST EXPENSIVE RESTAURANTS THAT OFFER CUISINE OTHER THAN INDIAN CUISINE.
+
+Q8. FIND THE RESTAURANTS THAT HAVE AN AVERAGE COST WHICH IS HIGHER THAN THE TOTAL AVERAGE COST OF ALL RESTAURANTS TOGETHER.
+
+Q9.RETRIEVE THE DETAILS OF RESTAURANTS THAT HAVE THE SAME NAME BUT ARE LOCATED IN DIFFERENT CITIES.
+
+Q10. WHICH RESTAURANT OFFERS THE MOST NUMBER OF ITEMS IN THE 'MAIN COURSE' CATEGORY?
+
+Q11. LIST THE NAMES OF RESTAURANTS THAT ARE 100% VEGEATARIAN IN ALPHABETICAL ORDER OF RESTAURANT NAME.
+
+Q12. WHICH IS THE RESTAURANT PROVIDING THE LOWEST AVERAGE PRICE FOR ALL ITEMS?
+
+Q13. WHICH TOP 5 RESTAURANT OFFERS HIGHEST NUMBER OF CATEGORIES?
+
+Q14. WHICH RESTAURANT PROVIDES THE HIGHEST PERCENTAGE OF NON-VEGEATARIAN FOOD?
 
 
 
 
-# Case Study Analysis Questions
-
- Q1. How many orders were placed on Swiggy last month?
  
-
- Q2. Which restaurant received the most orders in the last quarter?
- 
-
- Q3. What is the total revenue generated from orders in the last six months?
-
-
- Q4. How many active users placed orders in the last month?
- 
-
- Q5.Which users placed the most orders in the last month along with their total order count? 
- 
-
- Q6.For each day of the last month, calculate the percentage of orders placed via the Swiggy website.
-
-
- Q7.List the top 5 users who spent the most on orders in the last month, along with their total spending.
- 
-
- Q8. Find the names of users who have placed orders from restaurants located in a city different from their own, along with the names of the restaurants and the cities they ordered from. 
-
-
-Q9. List the names of users along with their total spending (revenue generated from their orders) and the city they live in, sorted by total spending in descending order. 
-
-
- Q10. Retrieve the order IDs along with the total amounts of the orders and the names of the users who placed those orders. 
-
-
 
  # MY SQL Techniques used
 
- (1) Joins
+ Table Creation: Defining tables with appropriate data types.
  
-(2) Ranking and Partition
+Primary Keys: Assigning unique identifiers to each record.
 
-(3) CTE (Common Table Expression)
+Data Manipulation: Inserting, updating, and deleting records.
 
-(4) DateTime Manipulation
+Data Filtering: Using WHERE clauses to filter data.
 
-(5) Grouping and Sorting
+Aggregation Functions: Calculating averages, counts, max, and min values.
 
-(6) Aggregation Functions
+JOIN Operations: Combining data from multiple tables.
 
-(7) Sub-Queries
+Subqueries: Performing complex queries within queries.
 
-(8) Other Analytical functions
+String Manipulation: Modifying text data using functions.
 
+Grouping and Sorting: Grouping and sorting data based on criteria.
+
+Indexes: Optimizing query performance with indexes.
 
 
 
 
 # Conclusions and Insights
 
-(1) Top Performing Restaurants: By analyzing the total revenue generated by each restaurant, Swiggy can identify top-performing restaurants. This insight can help prioritize partnerships and promotional efforts with these restaurants to drive further revenue.
+(1) Restaurants with Rating > 4.5: This metric indicates the level of customer satisfaction. A high number of restaurants with ratings above 4.5 suggests a strong food culture and quality service in Bengaluru.
 
+(2) Top City with the Highest Number of Restaurants: Identifying the city with the highest number of restaurants showcases the distribution of food establishments. It could indicate areas of high population density or commercial activity.
 
-(2) Delivery Partner Efficiency: Analyzing the average delivery times for orders fulfilled by different delivery partners can reveal insights into their efficiency. Swiggy can use this information to recognize high-performing delivery partners and address any performance issues with others.
+(3) Restaurants with "Pizza" in Their Name: The prevalence of pizza-themed restaurants may reflect the popularity of this cuisine in Bengaluru.
 
+(4) Most Common Cuisine: Understanding the most common cuisine provides insights into local food preferences and can guide restaurant owners in menu planning and diversification.
 
-(3) Regional Preferences: Analyzing the average order amounts in different cities can highlight regional preferences and spending patterns. Swiggy can tailor marketing campaigns and restaurant partnerships to better meet the unique needs of each city.
+(5) Average Rating by City: Variations in average ratings across different cities could highlight differences in food quality, service standards, or customer preferences.
 
+(6) Highest Price of Recommended Items: Knowing the highest-priced items under the 'recommended' category helps identify upscale dining options or premium offerings.
 
-(4) User Loyalty: Tracking the number of orders placed by each user can provide insights into user loyalty and engagement. Swiggy can identify loyal users and implement loyalty programs or personalized offers to incentivize repeat orders and increase user retention.
+(7) Most Expensive Non-Indian Cuisine Restaurants: Identifying the most expensive non-Indian cuisine restaurants sheds light on high-end dining options catering to specific culinary tastes.
 
+(8) Restaurants with Above-Average Cost: These restaurants likely offer premium dining experiences or specialized cuisines, catering to a more affluent customer base.
 
-(5) Popular Items: Analyzing order items can reveal which menu items are most popular among users. Swiggy can work with restaurants to promote these popular items and optimize their menu offerings to cater to customer preferences.
+(9) Restaurants with the Same Name in Different Cities: This could indicate either chain restaurants or unrelated restaurants coincidentally sharing the same name, highlighting potential branding challenges or opportunities.
 
+(10) Restaurant with Most Main Course Items: This restaurant likely offers a diverse range of main course options, appealing to customers seeking variety in their meals.
 
-(6) Delivery Partner Allocation: By analyzing order volumes in different areas, Swiggy can optimize the allocation of delivery partners to ensure efficient coverage and minimize delivery times in high-demand areas.
+(11) 100% Vegetarian Restaurants: Listing these restaurants in alphabetical order provides a convenient reference for vegetarian diners.
 
+(12) Restaurant with the Lowest Average Price: This restaurant may offer budget-friendly dining options, appealing to cost-conscious consumers.
 
-(7) Seasonal Trends: Tracking order volumes over time can reveal seasonal trends and fluctuations in demand. Swiggy can use this information to anticipate peak periods and adjust staffing and resources accordingly.
+(13) Top 5 Restaurants with Highest Number of Categories: These restaurants likely offer extensive menus with diverse culinary offerings, attracting a wide range of customers.
 
-
-
+(14) Restaurant with Highest Percentage of Non-Vegetarian Food: Understanding this metric can help identify restaurants catering to non-vegetarian preferences, potentially influencing dining decisions for both vegetarian and non-vegetarian customers.
 
 
